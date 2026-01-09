@@ -501,38 +501,86 @@
     </div>
 </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
-        <div class="container">
-            <div class="text-center section-icon"><i class="fas fa-phone"></i></div>
-            <h2>Contact Us</h2>
-            <p>Ready to start your Spanish journey? Reach out and let's make magic happen!</p>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Get in Touch</h4>
-                    <p><i class="fab fa-instagram" style="color: #e4405f;"></i> <strong>Instagram:</strong> <a href="https://instagram.com/unicorn_estudio_de_espanol" target="_blank">@unicorn_estudio_de_espanol</a></p>
-                    <p><i class="fas fa-phone" style="color: #28a745;"></i> <strong>Phone:</strong> 9713109488, 9560986792</p>
-                <div class="col-md-6">
-                    <h4>Send Us a Message</h4>
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact Section -->
+<section id="contact" class="bg-light py-5">
+  <div class="container">
+    <div class="text-center section-icon">
+      <i class="fas fa-phone"></i>
+    </div>
+
+    <h2 class="text-center">Contact Us</h2>
+    <p class="text-center">
+      Ready to start your Spanish journey? Reach out and let's make magic happen!
+    </p>
+
+    <div class="row mt-4">
+      <!-- Left Column -->
+      <div class="col-md-6">
+        <h4>Get in Touch</h4>
+
+        <p>
+          <i class="fab fa-instagram" style="color:#e4405f;"></i>
+          <strong> Instagram:</strong>
+          <a href="https://instagram.com/unicorn_estudio_de_espanol" target="_blank">
+            @unicorn_estudio_de_espanol
+          </a>
+        </p>
+
+        <p>
+          <i class="fas fa-phone" style="color:#28a745;"></i>
+          <strong> Phone:</strong> 9713109488, 9560986792
+        </p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6">
+        <h4>Send Us a Message</h4>
+
+        <form id="contactForm">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="from_name"
+              placeholder="Your name"
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="from_email"
+              placeholder="Your email"
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Your message"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer>
