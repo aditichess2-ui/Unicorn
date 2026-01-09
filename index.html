@@ -501,7 +501,7 @@
     </div>
 </section>
 
-  <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="bg-light py-5">
   <div class="container">
     <div class="text-center section-icon">
@@ -514,10 +514,9 @@
     </p>
 
     <div class="row mt-4">
-      <!-- Left Column -->
+      <!-- Contact Info -->
       <div class="col-md-6">
         <h4>Get in Touch</h4>
-
         <p>
           <i class="fab fa-instagram" style="color:#e4405f;"></i>
           <strong> Instagram:</strong>
@@ -525,14 +524,13 @@
             @unicorn_estudio_de_espanol
           </a>
         </p>
-
         <p>
           <i class="fas fa-phone" style="color:#28a745;"></i>
           <strong> Phone:</strong> 9713109488, 9560986792
         </p>
       </div>
 
-      <!-- Right Column -->
+      <!-- Contact Form -->
       <div class="col-md-6">
         <h4>Send Us a Message</h4>
 
@@ -542,9 +540,7 @@
             <input
               type="text"
               class="form-control"
-              id="name"
               name="from_name"
-              placeholder="Your name"
               required
             >
           </div>
@@ -554,9 +550,7 @@
             <input
               type="email"
               class="form-control"
-              id="email"
               name="from_email"
-              placeholder="Your email"
               required
             >
           </div>
@@ -565,10 +559,8 @@
             <label class="form-label">Message</label>
             <textarea
               class="form-control"
-              id="message"
               name="message"
               rows="4"
-              placeholder="Your message"
               required
             ></textarea>
           </div>
@@ -581,6 +573,38 @@
     </div>
   </div>
 </section>
+
+<!-- ================= EMAILJS ================= -->
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("lj975z_iR3HfHGKuz"); // ✅ Your Public Key
+  })();
+</script>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "unicorn_gmail_service",   // ✅ Service ID
+      "template_bzfvh8n",        // ✅ Template ID
+      this
+    )
+    .then(function () {
+      alert("✨ Message sent successfully! We’ll contact you soon 🦄");
+      document.getElementById("contactForm").reset();
+    })
+    .catch(function (error) {
+      alert("❌ Failed to send message. Please try again.");
+      console.error("EmailJS Error:", error);
+    });
+  });
+</script>
+
 
     <!-- Footer -->
     <footer>
